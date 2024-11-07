@@ -1,0 +1,145 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 9999;
+}
+
+.modal-banner{
+    display: flex;
+    background-color: #ff824d;
+    border-radius: 10px 10px 0 0 ;
+}
+
+
+.title {
+    justify-content: center;
+    width: 568.031px;
+    background-color: #ff824d;
+    display: flex;
+    padding: 20px;
+
+    margin-left: 10%;
+    
+}
+
+.close-button{
+    font-size: xx-large;
+    background-color: unset !important;
+    color: white !important;
+
+}
+
+h2 {
+    color: white;
+}
+
+.modal {
+    background-color: white;
+    border-radius: 20px;
+    max-width: 90vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.form-scroll-container {
+    overflow-y: auto;
+    max-height: calc(90vh - 160px); /* Ajusta para permitir a rolagem e considera o cabeçalho e o rodapé */
+    padding: 0 30px; /* Padding somente nas laterais para evitar barra extra */
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+    width: 95%; /* Define a largura completa */
+}
+.form-scroll-container::-webkit-scrollbar {
+    display: none; /* Oculta a barra de rolagem no WebKit */
+}
+
+.modal-footer {
+    background-color: #ff824d;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 10px 10px;
+    padding: 0 20px;
+}
+
+.modal label {
+    display: block;
+    padding-top: 10px;
+    margin-top: 10px;
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.modal select,
+.modal input,
+.modal textarea {
+    width: 100%;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background-color: white;
+    padding: 10px;
+}
+
+.modal textarea {
+    resize: none;
+    overflow: hidden; /* Oculta a barra de rolagem */
+}
+
+.modal input[type="file"] {
+    border: none;
+}
+
+.modal button {
+    flex: 1;
+    margin: 0 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #ff824d;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modal button:hover {
+    background-color: #ff824d;
+    color: #ffffff;
+}
+
+.gif-container {
+    position: relative;
+    margin-right: 10px;
+}
+
+.gif-image {
+    max-width: 50px;
+    opacity: 0.7;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.gif-preview {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 25px 0;
+    max-width: 400px;
+    overflow-y: auto;
+    max-height: 70px;
+}
+

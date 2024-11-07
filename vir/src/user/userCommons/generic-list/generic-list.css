@@ -1,0 +1,35 @@
+.list-item{
+    width: 351px;
+    height: 160px;
+    background-color: #FFDECF;
+    border-radius: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 6px 12px;
+    margin: 21px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.img{
+    border-radius: 8px;
+    height: 145px;
+    width: 112px;
+    margin-left: 5px;
+}
+.item-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    height: 100%;
+}
+.item-title{
+    margin-left: 18px;
+    font-size: 16px;
+    font-family: 'ABeeZee', sans-serif;
+    margin-top: -13px;
+    margin-bottom: 1px;
+
+    
+}

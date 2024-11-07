@@ -1,0 +1,51 @@
+.library-item-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+    margin-left: 14px;
+
+}
+
+.library-item-description {
+    margin-bottom: 16px;
+    margin-left: 5px;
+}
+
+.library-item-author {
+    font-size: 12px;
+    color: #000000;
+    font-family: 'ABeeZee', sans-serif;
+    margin-top: -14px;
+}
+
+.library-item-total-pages {
+    font-size: 12px;
+    font-family: 'ABeeZee', sans-serif;
+    color: #000000;
+    margin-top: -10px;
+}
+
+.library-item-add-button {
+    background-color: transparent;
+    border: 1px solid #F4663B;
+    width: 128.5px;
+    height: 30.4px;
+    color: #F4663B;
+    padding: 8px 16px;
+    border-radius: 17px;
+    font-size: 12px;
+    font-family: 'ABeeZee', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    align-self: flex-start;
+    margin-bottom: 20px;
+}
+
+/* Isso aqui serve pra deixar o botão todo laranja ao passar o mouse por cima
+A princípio é pra mudar somente na web. Se der problema no de celular é só excluir. */
+.library-item-add-button:hover {
+    background-color: #f4663b; 
+    color: white;
+  }

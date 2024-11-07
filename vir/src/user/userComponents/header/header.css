@@ -1,0 +1,40 @@
+.header {
+    background-color: #ffdecf;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+
+  .header-title {
+    color: #f4663b;
+    font-size: 36px;
+    font-family: 'ABeeZee', sans-serif;
+    text-align: center;
+    flex-grow: 1;
+    padding-left: 8%;
+  }
+
+  .back-icon {
+    width: 16px;
+    height: 18px;
+    cursor: pointer;
+  }
+  
+  .profile-icon {
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer; 
+  }
+  

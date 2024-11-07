@@ -1,0 +1,90 @@
+.bookshelf-item-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
+  margin-left: 19px;
+
+}
+
+.bookshelf-item-author {
+  font-size: 12px;
+  color: #000000;
+  font-family: 'ABeeZee', sans-serif;
+  margin-top: -13px;
+  margin-bottom: -4px;
+}
+
+.bookshelf-statistics{
+  width: 112%;
+}
+
+.book-progress-container{
+  display: flex;
+  align-items: center;
+
+  
+}
+
+.progress-bar {
+  display: flex;
+  background-color:#f4663b4c;
+  border-radius: 10px;
+  width: 80%;
+  height: 15px;
+}
+
+.progress-bar-done{
+  background-color:#f4663b;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.progress-percentage {
+  font-family: ABeeZee;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 11.81px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color:#000000;
+  font-weight: bold;
+  display: flex;
+  margin-bottom: 2px;
+}
+
+.page-info span:first-child {
+  margin-right: 20px;
+  margin-bottom: 10px;
+  margin-left: -30px;
+}
+
+.page-info span {
+  color: black !important; /* Força a cor do texto a ser preta */
+  font-family: 'ABeeZee', sans-serif;
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.bookshelf-item-add-button {
+  background-color: transparent;
+  border: 1px solid #F4663B;
+  color: #F4663B;
+  padding: 8px 35px;
+  border-radius: 17px;
+  font-size: 12px;
+  font-family: 'ABeeZee', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  align-self: flex-start;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+/* Isso aqui serve pra deixar o botão todo laranja ao passar o mouse por cima
+A princípio é pra mudar somente na web. Se der problema no de celular é só excluir. */
+.bookshelf-item-add-button:hover {
+  background-color: #f4663b; 
+  color: white;
+}

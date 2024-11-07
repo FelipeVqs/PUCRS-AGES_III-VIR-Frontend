@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap');
+
+
+
+
+.synopsis-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 60px;
+  text-align: center;
+  font-family: "ABeeZee", sans-serif;
+}
+
+.book-title{
+  font-size: 4vw;
+  margin-top: 90px;
+}
+
+.synopsis-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: 8px;
+}
+
+.progress-bar {
+  width: 80%;
+  height: 15px;
+  background-color: #ffdecf;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #f4663b;
+  border-radius: 10px;
+}
+
+.progress-percentage {
+  margin-left: 10px;
+  font-size: 3vw;
+  font-weight: bold;
+  color: #f4663b;
+}
+
+.page-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 3vw;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.page-info span:first-child {
+  color: #f4663b; 
+}
+
+.page-info span:last-child {
+  color: black; 
+}
+
+.book-description {
+  font-size: 4vw;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.book-info {
+  font-size: 3vw;
+  color: black;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.pages-left{
+  color: #f4663b;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.continue-button {
+  background-color: transparent;
+  color: #f4663b;
+  border: 2px solid #f4663b;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}

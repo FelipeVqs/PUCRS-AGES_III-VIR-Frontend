@@ -1,0 +1,23 @@
+.common-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.input-field {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  height: 28px;
+  padding-left: 7px;
+}
+
+.input-field:hover {
+  border: 1px solid rgb(0, 0, 0);
+}

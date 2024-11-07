@@ -1,0 +1,23 @@
+.cancel-button {
+    background-color: #FFF0DF;
+    color: #333;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+    height: 31px;
+    width: 180px;
+    }
+  
+  .cancel-button:hover {
+    color: #FF824D;
+    box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.7);
+    }
+  
+  .cancel-button:active {
+    box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.9);
+  }
+  
+  

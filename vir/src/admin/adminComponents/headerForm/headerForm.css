@@ -1,0 +1,31 @@
+.header-form {
+    background-color: #FF824D;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o título no centro do header */
+    height: 50px;
+    position: relative; /* Necessário para posicionamento absoluto do botão */
+  }
+  
+  .close-button {
+    position: absolute;
+    right: 15px; /* Ajuste a distância da borda direita conforme necessário */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon-x {
+    width: 14px; /* Ajuste conforme necessário */
+    height: 14px;
+    background-color: transparent;
+  }
+    
+  .title-header {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 800;
+  }
+  

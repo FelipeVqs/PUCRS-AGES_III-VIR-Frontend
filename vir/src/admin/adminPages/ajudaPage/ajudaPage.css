@@ -1,0 +1,88 @@
+.help{
+    background-color: gray;
+    align-content: center;
+    height: 100vh;
+}
+
+.help-container{
+    background-color: whitesmoke;
+    padding: 40px;
+    margin: 40px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.help-title{
+    text-align: center;
+    font-size: 1.7vw;
+}
+
+.help-texts{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    gap: 60px;
+    font-size: 1.1vw;
+}
+
+.help-text{
+    flex: 1; 
+    padding: 10px; 
+}
+
+.help-doc{
+    color: gray;
+    flex-grow: 1;
+    align-content: flex-end;
+    font-size: 1.2vw;
+    margin-top: 30px;
+}
+
+.help-doc-download{
+    color: #FF824D;
+    text-decoration: none;
+}
+
+.help-doc-download:hover{
+    text-decoration:underline;
+}
+
+.help-aqui{
+    color: #316898;
+    text-decoration: none;
+}
+
+.help-aqui:hover{
+    color: #316898;
+    text-decoration:underline;
+}
+
+.help-downloads{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.help-download-btn{
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.2vw;
+    background-color: #FF824D;
+    border: whitesmoke 1px solid;
+    border-radius: 4px;
+    padding: 15px;
+    margin: 3px 0;
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.help-download-btn:hover{
+    background-color: gray;
+}
+
+.help-text > h1{
+    color: #FF824D;
+}

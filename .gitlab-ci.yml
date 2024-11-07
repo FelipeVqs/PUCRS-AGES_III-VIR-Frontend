@@ -1,0 +1,65 @@
+stages:
+  - build
+  - deploy
+  - sync  # Adicionando o estágio sync aqui para que seja reconhecido
+
+
+
+variables:
+  SSH_USER: ubuntu  # Ou gitlab-runner, conforme o usuário correto
+  SSH_HOST: vir.totalclan.com.br
+  REACT_APP_PATH: /home/ubuntu/vir-frontend/
+  SSH_PASSWORD: abril
+
+build:
+  stage: build
+  image: node:16-alpine
+  script:
+    - cd vir/
+    - git fetch --all
+    - npm install
+    - CI=false npm run build
+    - ls -la build/
+  artifacts:
+    paths:
+      - vir/build/
+    when: always
+
+deploy:
+  stage: deploy
+  dependencies:
+    - build
+  script:
+    - ls -la vir/build/
+    - ssh-keyscan -H $SSH_HOST >> ~/.ssh/known_hosts
+    - echo "$SSH_PASSWORD" | sshpass -p "$SSH_PASSWORD" ssh -tt $SSH_USER@$SSH_HOST "echo '$SSH_PASSWORD' | sudo -S mkdir -p $REACT_APP_PATH"
+    - sshpass -p "$SSH_PASSWORD" scp -r vir/build/* $SSH_USER@$SSH_HOST:$REACT_APP_PATH/
+    - sshpass -p "$SSH_PASSWORD" ssh -tt $SSH_USER@$SSH_HOST "sudo systemctl restart nginx"
+    - sshpass -p "$SSH_PASSWORD" ssh -tt $SSH_USER@$SSH_HOST "pm2 restart react-app"
+    
+
+sync:
+  stage: sync
+  only:
+    - dev
+  variables:
+    GITHUB_REPO: "https://FelipeVqs@github.com/FelipeVqs/PUCRS-AGES_III-VIR-Frontend.git"
+    GIT_CREDENTIALS: $GITHUB_TOKEN
+  script:
+    - echo "Iniciando sincronização com GitHub"
+    - rm -rf .git  # Remove o repositório local para evitar inconsistências
+    - git init  # Recria o repositório local
+    - git config --global user.name "Felipe Vasques"
+    - git config --global user.email "felipe.heyman@edu.pucrs.br"
+    - git remote add github $GITHUB_REPO
+    - echo "https://${GIT_CREDENTIALS}@github.com" > ~/.git-credentials
+    - git config --global credential.helper store
+    - git fetch --all --prune
+    - git checkout -B dev origin/dev || git checkout -B dev
+    - git fsck --full  # Verifica a integridade do repositório
+    - git repack -a -f -d --depth=250 --window=250
+    - git gc --prune=now --aggressive
+    - git add .
+    - if [ -n "$(git status --porcelain)" ]; then git commit -m "Sincronizando branch dev"; else echo "Nada para comitar"; fi
+    - git push --force github dev:dev || (echo "Falha ao sincronizar com o GitHub" && exit 1)
+

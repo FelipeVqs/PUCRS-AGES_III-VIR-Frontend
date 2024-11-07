@@ -1,0 +1,33 @@
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #FFF;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+  }
+  
+  .side-menu.open {
+    right: 0;
+  }
+  
+  .side-menu h2 {
+    color: #F4663B;
+    cursor: pointer;
+  }
+  
+  .side-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .side-menu li {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+  }
+  

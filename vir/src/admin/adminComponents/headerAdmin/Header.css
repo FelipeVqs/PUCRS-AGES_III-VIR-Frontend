@@ -1,0 +1,35 @@
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #FF824D;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px; /* Define uma altura fixa menor */
+  margin: 0 auto;
+  z-index: 1000;
+}
+
+.nav-item {
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  transition: background-color 0.3s ease;
+  padding: 0 20px; /* Ajusta o espaçamento */
+}
+
+.nav-item.selected {
+  background-color: white;
+  color: #FF824D; /* Aplica a cor apenas no texto */
+  border-radius: 0px 0px 10px 10px; /* Arredonda apenas os cantos inferiores */
+  
+  /* Centraliza o texto no item */
+  padding: 25px 25px; /* Ajusta a altura do fundo */
+  box-sizing: border-box;
+}
+
+
